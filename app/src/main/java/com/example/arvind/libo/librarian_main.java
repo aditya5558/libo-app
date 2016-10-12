@@ -132,5 +132,17 @@ public class librarian_main extends AppCompatActivity
         Intent intent = new Intent (this,manage_books.class);
         startActivity(intent);
     }
+
+//    @Override
+//    public void onBackPressed(){
+//        Intent intent = new Intent (librarian_main.this,MainActivity.class);
+//        librarian_main.this.startActivity(intent);
+//    }
+
+
+    public void signout(View view){
+        Intent intent = new Intent (this,MainActivity.class);
+        startActivity(intent);
+    }
 }
 

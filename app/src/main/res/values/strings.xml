@@ -3,6 +3,7 @@
     <string name="title_activity_librarian_login">Sign in</string>
 
     <!-- Strings related to login -->
+    <string name="subscription_key">63d42df6fba3489590ec0c70ecd86873</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>

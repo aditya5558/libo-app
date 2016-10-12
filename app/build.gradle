@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.example.arvind.libo"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -28,6 +28,10 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.microsoft.azure:azure-mobile-android:3.1.0'
+    compile 'com.microsoft.projectoxford:vision:1.0.354'
+    //compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('libs/gson-2.3.1.jar')
+
     testCompile 'junit:junit:4.12'
     compile 'com.rmtheis:tess-two:5.4.1'
 

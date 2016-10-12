@@ -14,8 +14,14 @@ public class add_book_main extends AppCompatActivity {
 
 
     }
-    public void goTo_ocr(View view){
-        Intent intent = new Intent (this,ocr.class);
+    public void goTo_ocr_ms(View view){
+        Intent intent = new Intent (this,ocr_ms.class);
         startActivity(intent);
     }
+
+    public void goTo_manual(View view){
+        Intent intent = new Intent (this,add_book.class);
+        startActivity(intent);
+    }
+
 }

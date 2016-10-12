@@ -17,4 +17,9 @@ public class manage_books extends AppCompatActivity {
         Intent intent = new Intent (this,add_book_main.class);
         startActivity(intent);
     }
+
+    public void goviewallbooks(View view){
+        Intent intent = new Intent (this,viewallbooks.class);
+        startActivity(intent);
+    }
 }

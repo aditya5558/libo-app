@@ -17,4 +17,11 @@ public class manage_membership_main extends AppCompatActivity {
         Intent intent = new Intent (this,add_member.class);
         startActivity(intent);
     }
+
+    public void goTorenew_member(View view){
+        Intent intent = new Intent (this,renew_mebership.class);
+        startActivity(intent);
+    }
+
+
 }

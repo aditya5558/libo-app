@@ -2,13 +2,21 @@ package com.example.arvind.libo;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+
+import java.net.MalformedURLException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +31,14 @@ public class test extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private MobileServiceClient mClient;
+
+    EditText BookTxt;
+    Button Submitbutton;
+    Book result;
+    MobileServiceTable<Member> table;
+    MobileServiceTable<Book> table2;
 
     public static test newInstance() {
         test fragment = new test();
@@ -57,15 +73,81 @@ public class test extends Fragment {
 //        return fragment;
 //    }
 
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+//        if (getArguments() != null) {
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
+//        }
+
+
+//        try {
+//            mClient = new MobileServiceClient("https://libo.azurewebsites.net", getActivity());
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
 //
-////        if (getArguments() != null) {
-////            mParam1 = getArguments().getString(ARG_PARAM1);
-////            mParam2 = getArguments().getString(ARG_PARAM2);
-////        }
-//    }
+//
+//        table = mClient.getTable(Member.class);
+//        table2 = mClient.getTable(Book.class);
+//        BookTxt=(EditText) getActivity().findViewById(R.id.BookTxt);
+//        Submitbutton = (Button) getActivity().findViewById(R.id.sbtn);
+//
+//        Submitbutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                final String bid = BookTxt.getText().toString();
+//
+//
+//                new AsyncTask<Void, Void, Void>() {
+//
+//                    @Override
+//                    protected Void doInBackground(Void... params) {
+//                        try {
+//
+//                            result = table2.lookUp(bid).get();
+//                            result.is_issued="0000";
+//                            table2.update(result).get();
+//
+//
+//
+//
+//
+//
+//                            getActivity().runOnUiThread(new Runnable() {
+//
+//                                @Override
+//                                public void run() {
+//
+//
+//
+//                                    BookTxt.getText().clear();
+//
+//                                        Toast.makeText(getActivity(), "Book returned ", Toast.LENGTH_SHORT).show();}
+//
+//
+//                            });
+//                            // Toast.makeText(renew_mebership.this, "Renewed by 1 year ", Toast.LENGTH_SHORT).show();
+//
+////                            table.insert(result);
+////
+//
+//
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//
+//                            Toast.makeText(getActivity(), "failed ", Toast.LENGTH_SHORT).show();
+//                        }
+//                        return null;
+//                    }
+//                }.execute();
+//
+//            }
+//        });
+    }
 
 
     @Override
@@ -74,6 +156,71 @@ public class test extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_test, container, false);
         //ClickMe = (Button) rootView.findViewById(R.id.button);
         TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+
+//        try {
+//            mClient = new MobileServiceClient("https://libo.azurewebsites.net", getActivity());
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//        table = mClient.getTable(Member.class);
+//        table2 = mClient.getTable(Book.class);
+//        BookTxt=(EditText) rootView.findViewById(R.id.BookTxt);
+//        Submitbutton = (Button) rootView.findViewById(R.id.sbtn);
+
+//        Submitbutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                final String bid = BookTxt.getText().toString();
+//
+//
+//                new AsyncTask<Void, Void, Void>() {
+//
+//                    @Override
+//                    protected Void doInBackground(Void... params) {
+//                        try {
+//
+//                            result = table2.lookUp(bid).get();
+//                            result.is_issued="0000";
+//                            table2.update(result).get();
+//
+//
+//
+//
+//
+//
+//                            getActivity().runOnUiThread(new Runnable() {
+//
+//                                @Override
+//                                public void run() {
+//
+//
+//
+//                                    BookTxt.getText().clear();
+//
+//                                        Toast.makeText(getActivity(), "Book returned ", Toast.LENGTH_SHORT).show();}
+//
+//
+//                            });
+//                            // Toast.makeText(renew_mebership.this, "Renewed by 1 year ", Toast.LENGTH_SHORT).show();
+//
+////                            table.insert(result);
+////
+//
+//
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//
+//                            Toast.makeText(getActivity(), "failed ", Toast.LENGTH_SHORT).show();
+//                        }
+//                        return null;
+//                    }
+//                }.execute();
+//
+//            }
+//        });
 
         return rootView;
     }

@@ -19,7 +19,7 @@
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_marginTop="22dp"
-        android:id="@+id/find_book"
+        android:id="@+id/vmember"
         android:hint="enter member id"
         android:gravity="center_vertical|center_horizontal" />
 
@@ -27,7 +27,8 @@
         android:text="Enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/find_book"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/Enter" />
+
+        android:id="@+id/sviewm"
+        android:layout_below="@+id/vmember"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

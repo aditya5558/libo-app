@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,7 +40,7 @@
         <activity android:name=".manage_books" />
         <activity android:name=".find_a_book" />
         <activity android:name=".view_member" />
-        <activity android:name=".add_member"/>
+        <activity android:name=".add_member" />
         <activity android:name=".generate_bill" />
         <activity
             android:name=".user_main"
@@ -50,10 +49,29 @@
         <activity android:name=".add_book_main" />
         <activity android:name=".ocr">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".renew_mebership" />
+        <activity android:name=".add_book" />
+        <activity android:name=".view_member_display" />
+        <activity android:name=".user_login_modified" />
+        <activity android:name=".user_main_new" />
+        <activity android:name=".returnpage" />
+        <activity android:name=".viewallbooks" />
+        <activity android:name=".dob" />
+        <activity android:name=".myprofile" />
+        <activity android:name=".mybooklist" />
+        <activity android:name=".bookadapter2">
+            <activity android:name=".ocr_ms" />
+            <activity
+                android:name=".helper.SelectImageActivity"
+                android:label="select_an_image"
+                android:screenOrientation="portrait" />
+
+
         </activity>
     </application>
 
