@@ -64,7 +64,7 @@
         <activity android:name=".dob" />
         <activity android:name=".myprofile" />
         <activity android:name=".mybooklist" />
-        <activity android:name=".bookadapter2">
+        <activity android:name=".bookadapter2"/>
             <activity android:name=".ocr_ms" />
             <activity
                 android:name=".helper.SelectImageActivity"
@@ -72,7 +72,7 @@
                 android:screenOrientation="portrait" />
 
 
-        </activity>
+        
     </application>
 
 </manifest>
